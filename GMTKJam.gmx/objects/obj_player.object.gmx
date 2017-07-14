@@ -83,7 +83,10 @@ right = keyboard_check(ord('D')) &amp;&amp; game_running;
 up = keyboard_check_pressed(ord('W')) &amp;&amp; game_running;
 jump = keyboard_check_pressed(vk_space) &amp;&amp; game_running;
 
-xspeed = approach(xspeed, (right-left)*2, .5*game_running);
+if (place_meeting(x, y+1, obj_wall))
+    xspeed = approach(xspeed, (right-left)*2, .5*game_running);
+else 
+    xspeed = approach(xspeed, (right-left)*2, .20*game_running);
 
 if (place_meeting(x + xspeed, y, obj_wall)){
     // avrundar x så att man inte fastnar i vägg
@@ -157,13 +160,13 @@ if (up){
     boxes --;
 }
 
-if (alarm[0] &gt; 20 &amp;&amp; alarm[0] != 30){
+if (alarm[0] &gt; 15 &amp;&amp; alarm[0] != 30){
     angle = arctan2(box.x - x, box.y - y);
-    box.xspeed = sin(angle)*8;
-    box.yspeed = cos(angle)*8;
+    box.xspeed = sin(angle)*7;
+    box.yspeed = cos(angle)*7;
     
-    xspeed = -sin(angle)*6;
-    yspeed = -cos(angle)*6;
+    xspeed = -sin(angle)*7;
+    yspeed = -cos(angle)*5;
     
     scr_freeze(6);
 }
