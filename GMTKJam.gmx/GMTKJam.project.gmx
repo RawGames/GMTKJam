@@ -6,8 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\sprite1</sprite>
     <sprite>sprites\test</sprite>
     <sprite>sprites\sprite3</sprite>
   </sprites>
