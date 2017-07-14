@@ -6,10 +6,12 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\test</sprite>
     <sprite>sprites\sprite3</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_expandable_box</sprite>
+    <sprite>sprites\spr_unlockable_wall</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -22,9 +24,13 @@
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_expandable_box</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_unlockable_door</object>
+    <object>objects\obj_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
+    <room>rooms\level1</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42930.7973372106</constant>

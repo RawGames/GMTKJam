@@ -80,6 +80,7 @@ boxes = 2;
             <kind>1</kind>
             <string>left = keyboard_check(ord('A'));
 right = keyboard_check(ord('D'));
+up = keyboard_check_pressed(ord('W'));
 jump = keyboard_check_pressed(vk_space);
 
 xspeed = approach(xspeed, (right-left)*2, .5);
@@ -117,6 +118,13 @@ if (place_meeting(x, y+1, obj_wall)){
     yspeed += GRAV;
 }
 
+// gå genom dörr
+if (up){
+    if (place_meeting(x, y, obj_door)){
+        door = instance_place(x, y, obj_door)
+        room_goto(door.rm);
+    }
+}
 
 </string>
           </argument>

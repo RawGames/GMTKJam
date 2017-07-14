@@ -82,6 +82,14 @@ yspeed = 0;
         x--;
     if (place_meeting(x-1, y, obj_wall))
         x++;
+    if (place_meeting(x+1, y, obj_expandable_box)){
+        var box = instance_place(x+1,y,obj_expandable_box);
+        box.x ++;
+    }
+    if (place_meeting(x-1, y, obj_expandable_box)){
+        var box = instance_place(x-1,y,obj_expandable_box);
+        box.x --;
+    }
     if (alarm[0] &lt;= 0){
         if(place_meeting(x+1, y, obj_player))
             obj_player.x ++;
@@ -95,11 +103,11 @@ if (image_yscale != 1){
     if (place_meeting(x, y-1, obj_wall))
         y++;
     if (alarm[0] &lt;= 0){
-        if (place_meeting(x, y+1, obj_player))
+        if (place_meeting(x, y+2, obj_player))
             obj_player.y+=2;
         if (place_meeting(x, y-1, obj_player))
             obj_player.y-=2;
-    }
+    }  
 }
 
 image_xscale = approach(image_xscale, 1, 1/32);
