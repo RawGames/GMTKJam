@@ -5,12 +5,21 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\sprite1</sprite>
+    <sprite>sprites\test</sprite>
+    <sprite>sprites\sprite3</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
   </rooms>
+  <constants number="2">
+    <constant name="GM_build_date">0</constant>
+    <constant name="GM_version">0</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
