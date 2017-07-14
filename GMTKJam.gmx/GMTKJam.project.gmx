@@ -8,18 +8,20 @@
   <sprites name="sprites">
     <sprite>sprites\test</sprite>
     <sprite>sprites\sprite3</sprite>
-    <sprite>sprites\sprite2</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_expandable_box</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\approach.gml</script>
+    <script>scripts\scr_create_rope.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_expandable_box</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
