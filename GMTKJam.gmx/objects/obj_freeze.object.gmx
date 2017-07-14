@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,20 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar boxes;
-boxes = 4;
-
-globalvar game_running;
-game_running = true;
-
-// display stuff
-display_set_gui_size(view_wview, view_hview);
+            <string>alarm[0] = -10
+game_running = false;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,40 +49,7 @@ display_set_gui_size(view_wview, view_hview);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(vk_f5))
-    window_set_fullscreen(!window_get_fullscreen());
-    
-if (keyboard_check_pressed(ord('R')))
-    room_restart();
-    
-if (keyboard_check_pressed(vk_f8))
-    scr_freeze(5);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>for (var i = 0; i &lt; boxes; i++){
-    draw_sprite_ext(spr_expandable_box, 0,20 + 36*i, 15, .5, .5, 0, c_white, .8);
-}
+            <string>game_running = true;
 </string>
           </argument>
         </arguments>

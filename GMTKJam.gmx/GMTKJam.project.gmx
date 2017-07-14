@@ -18,6 +18,7 @@
   <scripts name="scripts">
     <script>scripts\approach.gml</script>
     <script>scripts\scr_create_rope.gml</script>
+    <script>scripts\scr_freeze.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_controller</object>
@@ -27,6 +28,7 @@
     <object>objects\obj_door</object>
     <object>objects\obj_unlockable_door</object>
     <object>objects\obj_button</object>
+    <object>objects\obj_freeze</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>

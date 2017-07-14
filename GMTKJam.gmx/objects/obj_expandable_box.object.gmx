@@ -110,8 +110,8 @@ if (image_yscale != 1){
     }  
 }
 
-image_xscale = approach(image_xscale, 1, 1/32);
-image_yscale = approach(image_yscale, 1, 1/32);
+image_xscale = approach(image_xscale, 1, (1/32)*game_running);
+image_yscale = approach(image_yscale, 1, (1/32)*game_running);
 
 // kill player
 if (y &lt; obj_player.y){
@@ -134,7 +134,7 @@ if (place_meeting(x + xspeed, y, obj_wall)){
     xspeed = 0;
 }
 // lägger till hastighet på x
-x += xspeed;
+x += xspeed *game_running;
 
 if (place_meeting(x, y + yspeed, obj_wall)){
     // avrundar y
@@ -147,12 +147,12 @@ if (place_meeting(x, y + yspeed, obj_wall)){
     yspeed = 0;
 }
 // lägger till hastighet på y
-y += yspeed;
+y += yspeed *game_running;
 
 // kollar om den står på mark
 if (!place_meeting(x, y+1, obj_wall)){
     // gravitation
-    yspeed += GRAV;
+    yspeed += GRAV *game_running;
 } else {
     // friction
     if (alarm[0] &lt;= 0){
