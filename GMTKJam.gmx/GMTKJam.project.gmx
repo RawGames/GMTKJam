@@ -6,25 +6,42 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\test</sprite>
     <sprite>sprites\sprite3</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_expandable_box</sprite>
+    <sprite>sprites\spr_unlockable_wall</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\approach.gml</script>
     <script>scripts\scr_create_rope.gml</script>
+    <script>scripts\scr_freeze.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_expandable_box</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_button</object>
+    <objects name="effects">
+      <object>objects\obj_freeze</object>
+    </objects>
+    <objects name="walls">
+      <object>objects\obj_unlockable_door</object>
+      <object>objects\obj_expandable_box</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_invisible_wall</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
+    <room>rooms\rm_tut</room>
+    <room>rooms\rm_tut2</room>
+    <room>rooms\level0</room>
+    <room>rooms\level1</room>
+    <room>rooms\level2</room>
+    <room>rooms\level3</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42931.5407356019</constant>

@@ -32,6 +32,8 @@ alarm[0] = 20;
 
 xspeed = 0;
 yspeed = 0;
+
+sol = false;
 </string>
           </argument>
         </arguments>
@@ -55,6 +57,7 @@ yspeed = 0;
           <argument>
             <kind>1</kind>
             <string>/// måste finnas
+sol = true;
 </string>
           </argument>
         </arguments>
@@ -80,8 +83,16 @@ yspeed = 0;
             <string>if (image_xscale != 1){
     if (place_meeting(x+1, y, obj_wall))
         x--;
-    if (place_meeting(x-2, y, obj_wall))
+    if (place_meeting(x-1, y, obj_wall))
         x++;
+    if (place_meeting(x+1, y, obj_expandable_box)){
+        var box = instance_place(x+1,y,obj_expandable_box);
+        box.x ++;
+    }
+    if (place_meeting(x-1, y, obj_expandable_box)){
+        var box = instance_place(x-1,y,obj_expandable_box);
+        box.x --;
+    }
 }
 if (image_yscale != 1){
     if (place_meeting(x, y+1, obj_wall))
@@ -90,8 +101,14 @@ if (image_yscale != 1){
         y++;
 }
 
-image_xscale = approach(image_xscale, 1, 1/32);
-image_yscale = approach(image_yscale, 1, 1/32);
+if (alarm[0] &lt;= 0){
+    if (place_meeting(x, y,obj_player)){
+        room_restart();
+    }
+}
+
+image_xscale = approach(image_xscale, 1, (1/32)*game_running);
+image_yscale = approach(image_yscale, 1, (1/32)*game_running);
 
 // kill player
 if (y &lt; obj_player.y){
@@ -113,8 +130,9 @@ if (place_meeting(x + xspeed, y, obj_wall)){
     }
     xspeed = 0;
 }
+
 // lägger till hastighet på x
-x += xspeed;
+x += xspeed *game_running;
 
 if (place_meeting(x, y + yspeed, obj_wall)){
     // avrundar y
@@ -127,12 +145,12 @@ if (place_meeting(x, y + yspeed, obj_wall)){
     yspeed = 0;
 }
 // lägger till hastighet på y
-y += yspeed;
+y += yspeed *game_running;
 
 // kollar om den står på mark
 if (!place_meeting(x, y+1, obj_wall)){
     // gravitation
-    yspeed += GRAV;
+    yspeed += GRAV *game_running;
 } else {
     // friction
     if (alarm[0] &lt;= 0){
