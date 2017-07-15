@@ -28,6 +28,7 @@
             <string>// viktiga variabler
 xspeed = 0;
 yspeed = 0;
+dead = false;
 
 // cooldown
 alarm[0] = -1;
@@ -79,14 +80,14 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>left = keyboard_check(ord('A')) &amp;&amp; game_running;
-right = keyboard_check(ord('D')) &amp;&amp; game_running;
-up = keyboard_check_pressed(ord('W')) &amp;&amp; game_running;
-jump = keyboard_check_pressed(vk_space) &amp;&amp; game_running;
+            <string>left = keyboard_check(ord('A')) &amp;&amp; game_running &amp;&amp; !dead;
+right = keyboard_check(ord('D')) &amp;&amp; game_running &amp;&amp; !dead;
+up = keyboard_check_pressed(ord('W')) &amp;&amp; game_running &amp;&amp; !dead;
+jump = keyboard_check_pressed(vk_space) &amp;&amp; game_running &amp;&amp; !dead;
 
-if (place_meeting(x, y+1, obj_wall))
+if (place_meeting(x, y+1, obj_wall) &amp;&amp; !dead)
     xspeed = approach(xspeed, (right-left)*2, .5*game_running);
-else 
+else if (!dead)
     xspeed = approach(xspeed, (right-left)*2, .20*game_running);
 
 if (left || right){
@@ -102,7 +103,7 @@ if (left || right){
     image_index = 0;
 }
     
-if (place_meeting(x + xspeed, y, obj_wall)){
+if (place_meeting(x + xspeed, y, obj_wall) &amp;&amp; !dead){
     // avrundar x så att man inte fastnar i vägg
     var wall = instance_place(x + xspeed, y, obj_wall);
     if (wall.sol == true){
@@ -118,7 +119,7 @@ if (place_meeting(x + xspeed, y, obj_wall)){
 // lägger till hastighet på x
 x += xspeed*game_running;
 
-if (place_meeting(x, y + yspeed, obj_wall)){
+if (place_meeting(x, y + yspeed, obj_wall) &amp;&amp; !dead){
      var wall = instance_place(x, y + yspeed, obj_wall);
      if (wall.sol == true){
         // avrundar y
@@ -135,7 +136,7 @@ if (place_meeting(x, y + yspeed, obj_wall)){
 y += yspeed*game_running;
 
 // kollar om man nuddar marken
-if (place_meeting(x, y+1, obj_wall)){
+if (place_meeting(x, y+1, obj_wall) &amp;&amp; !dead){
     if (jump) yspeed = -4;
 } else {
     yspeed += GRAV*game_running;
@@ -148,6 +149,9 @@ if (up){
         room_goto(door.rm);
     }
 }
+
+// restarts room
+if (y &gt; room_height+32) room_restart();
 
 </string>
           </argument>

@@ -27,7 +27,11 @@
   <scripts name="scripts">
     <script>scripts\approach.gml</script>
     <script>scripts\scr_create_rope.gml</script>
-    <script>scripts\scr_freeze.gml</script>
+    <scripts name="effects">
+      <script>scripts\scr_freeze.gml</script>
+      <script>scripts\scr_screenshake.gml</script>
+    </scripts>
+    <script>scripts\scr_die.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_controller</object>
@@ -36,6 +40,7 @@
     <object>objects\obj_button</object>
     <objects name="effects">
       <object>objects\obj_freeze</object>
+      <object>objects\obj_screenshake</object>
       <object>objects\obj_smoke</object>
     </objects>
     <objects name="walls">
