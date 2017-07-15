@@ -23,16 +23,21 @@
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_expandable_box</object>
     <object>objects\obj_door</object>
-    <object>objects\obj_unlockable_door</object>
     <object>objects\obj_button</object>
     <objects name="effects">
       <object>objects\obj_freeze</object>
     </objects>
+    <objects name="walls">
+      <object>objects\obj_unlockable_door</object>
+      <object>objects\obj_expandable_box</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_invisible_wall</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_tut</room>
+    <room>rooms\rm_tut2</room>
     <room>rooms\level0</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>

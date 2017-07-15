@@ -87,7 +87,7 @@ if (keyboard_check_pressed(vk_f8))
           <argument>
             <kind>1</kind>
             <string>for (var i = 0; i &lt; boxes; i++){
-    draw_sprite_ext(spr_expandable_box, 0,20 + 36*i, 15, .5, .5, 0, c_white, .8);
+    draw_sprite_ext(spr_expandable_box, 0,20 + 24*i, 15, .5, .5, 0, c_white, .8);
 }
 </string>
           </argument>
