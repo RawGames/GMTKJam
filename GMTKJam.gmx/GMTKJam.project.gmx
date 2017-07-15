@@ -7,11 +7,16 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprite3</sprite>
-    <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_door</sprite>
-    <sprite>sprites\spr_expandable_box</sprite>
-    <sprite>sprites\spr_unlockable_wall</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprites name="walls">
+      <sprite>sprites\spr_expandable_box</sprite>
+      <sprite>sprites\spr_unlockable_wall</sprite>
+      <sprite>sprites\spr_wall</sprite>
+    </sprites>
+    <sprites name="effects">
+      <sprite>sprites\spr_smoke</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -27,6 +32,7 @@
     <object>objects\obj_button</object>
     <objects name="effects">
       <object>objects\obj_freeze</object>
+      <object>objects\obj_smoke</object>
     </objects>
     <objects name="walls">
       <object>objects\obj_unlockable_door</object>
