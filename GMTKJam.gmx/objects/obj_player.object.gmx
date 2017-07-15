@@ -92,7 +92,7 @@ if (place_meeting(x + xspeed, y, obj_wall)){
     var wall = instance_place(x + xspeed, y, obj_wall);
     if (wall.sol == true){
         if (xspeed &gt; 0) x = floor(x);
-        else x = ceil(x);
+        else if (xspeed &lt; 0) x = ceil(x);
         // lägger till på x när man inte nuddar vägg
         while(!place_meeting(x + sign(xspeed), y, obj_wall)){
             x += sign(xspeed);
@@ -108,7 +108,7 @@ if (place_meeting(x, y + yspeed, obj_wall)){
      if (wall.sol == true){
         // avrundar y
         if (yspeed &gt; 0) y = floor(y);
-        else y = ceil(y);
+        else if (yspeed &lt; 0) y = ceil(y);
         // lägger tiull på y näe man inte nuddar en vägg
         while(!place_meeting(x, y + sign(yspeed), obj_wall)){
             y += sign(yspeed);
