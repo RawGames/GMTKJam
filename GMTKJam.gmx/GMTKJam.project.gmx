@@ -9,7 +9,7 @@
     <sound>sound\snd_startgame</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprites name="walls">
