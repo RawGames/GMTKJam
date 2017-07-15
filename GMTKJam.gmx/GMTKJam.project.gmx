@@ -13,6 +13,8 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_laser_turret</sprite>
+    <sprite>sprites\spr_laser_reciever</sprite>
     <sprites name="walls">
       <sprite>sprites\spr_expandable_box</sprite>
       <sprite>sprites\spr_unlockable_wall</sprite>
@@ -49,6 +51,13 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_invisible_wall</object>
     </objects>
+    <objects name="turrets">
+      <object>objects\obj_laser</object>
+      <object>objects\obj_laser_nonstop</object>
+      <object>objects\obj_laser_turret</object>
+      <object>objects\obj_laser_turret_nonstop</object>
+      <object>objects\obj_laser_reciever</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_tut</room>
@@ -61,6 +70,7 @@
     <room>rooms\level5</room>
     <room>rooms\level6</room>
     <room>rooms\level7</room>
+    <room>rooms\level8</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42931.5407356019</constant>

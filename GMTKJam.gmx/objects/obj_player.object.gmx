@@ -135,12 +135,13 @@ if (place_meeting(x, y + yspeed, obj_wall) &amp;&amp; !dead){
 // lägger till hastighet på y
 y += yspeed*game_running;
 
-// kollar om man nuddar marken
+// kollar om man nuddar marken yspeed -4
 if (place_meeting(x, y+1, obj_wall) &amp;&amp; !dead){
-    if (jump) yspeed = -4;
-} else {
-    yspeed += GRAV*game_running;
-}
+    var wall = instance_place(x,y+1,obj_wall);
+    if (wall.sol){
+        if (jump) yspeed = -4;
+    } else yspeed += GRAV
+} else yspeed += GRAV
 
 // gå genom dörr
 if (up){
@@ -190,7 +191,7 @@ if (alarm[0] &gt; 15 &amp;&amp; alarm[0] != 30){
     box.yspeed = cos(angle)*7;
     
     xspeed = -sin(angle)*7;
-    yspeed = -cos(angle)*5;
+    yspeed = -cos(angle)*6;
     
     instance_create(x+16*sin(angle), y+16*cos(angle), obj_smoke);
     
