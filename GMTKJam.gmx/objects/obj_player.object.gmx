@@ -32,6 +32,8 @@ yspeed = 0;
 // cooldown
 alarm[0] = -1;
 
+image_speed = 0;
+
 </string>
           </argument>
         </arguments>
@@ -90,7 +92,14 @@ else
 if (left || right){
     if (!(left &amp;&amp; right)){
         image_xscale = right-left;
+        image_speed = .1;
+    } else {
+        image_speed = 0;
+        image_index = 0;
     }
+} else {
+    image_speed = 0;
+    image_index = 0;
 }
     
 if (place_meeting(x + xspeed, y, obj_wall)){
