@@ -114,7 +114,7 @@ image_yscale = approach(image_yscale, 1, (1/32)*game_running);
 if (y &lt; obj_player.y){
     if (place_meeting(x,y+yspeed, obj_player)){
         if (alarm[0] &lt;= 0){
-            game_restart();
+            room_restart();
         }
     }
 }

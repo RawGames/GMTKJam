@@ -173,7 +173,7 @@ if (up){
             <kind>1</kind>
             <string>if (alarm[0] &lt;= 0 &amp;&amp; boxes &gt; 0){
     angle = arctan2(mouse_x - x, mouse_y - y);
-    box = instance_create(x, y-16, obj_expandable_box);
+    box = instance_create(x, y-8, obj_expandable_box);
     box.xspeed = sin(angle)*7;
     box.yspeed = cos(angle)*7
     alarm[0] = 30;
