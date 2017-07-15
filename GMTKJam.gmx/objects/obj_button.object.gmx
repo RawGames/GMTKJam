@@ -49,9 +49,11 @@
           <argument>
             <kind>1</kind>
             <string>if(place_meeting(x, y,obj_expandable_box)){
+    if (!activated) audio_play_sound(snd_btnpressed, 1, false);
     activated = true;
 }
 if(place_meeting(x, y,obj_player)){
+    if (!activated) audio_play_sound(snd_btnpressed, 1, false);
     activated = true;
 }
 </string>

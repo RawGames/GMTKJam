@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_player</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -87,6 +87,12 @@ if (place_meeting(x, y+1, obj_wall))
 else 
     xspeed = approach(xspeed, (right-left)*2, .20*game_running);
 
+if (left || right){
+    if (!(left &amp;&amp; right)){
+        image_xscale = right-left;
+    }
+}
+    
 if (place_meeting(x + xspeed, y, obj_wall)){
     // avrundar x så att man inte fastnar i vägg
     var wall = instance_place(x + xspeed, y, obj_wall);
@@ -173,7 +179,7 @@ if (alarm[0] &gt; 15 &amp;&amp; alarm[0] != 30){
     xspeed = -sin(angle)*7;
     yspeed = -cos(angle)*5;
     
-    instance_create(x+12*sin(angle), y+12*cos(angle), obj_smoke);
+    instance_create(x+16*sin(angle), y+16*cos(angle), obj_smoke);
     
     scr_freeze(6);
 }
