@@ -54,6 +54,8 @@
     <room>rooms\level3</room>
     <room>rooms\level4</room>
     <room>rooms\level5</room>
+    <room>rooms\level6</room>
+    <room>rooms\level7</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42931.5407356019</constant>
