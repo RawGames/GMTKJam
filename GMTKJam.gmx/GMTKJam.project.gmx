@@ -28,11 +28,15 @@
     <object>objects\obj_door</object>
     <object>objects\obj_unlockable_door</object>
     <object>objects\obj_button</object>
-    <object>objects\obj_freeze</object>
+    <objects name="effects">
+      <object>objects\obj_freeze</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
+    <room>rooms\level0</room>
     <room>rooms\level1</room>
+    <room>rooms\level2</room>
+    <room>rooms\level3</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42930.7973372106</constant>
