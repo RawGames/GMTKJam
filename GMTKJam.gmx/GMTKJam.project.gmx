@@ -15,6 +15,7 @@
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_laser_turret</sprite>
     <sprite>sprites\spr_laser_reciever</sprite>
+    <sprite>sprites\spr_tutorial</sprite>
     <sprites name="walls">
       <sprite>sprites\spr_expandable_box</sprite>
       <sprite>sprites\spr_unlockable_wall</sprite>
@@ -24,17 +25,23 @@
       <sprite>sprites\spr_smoke</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bac_tutorial</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\approach.gml</script>
     <script>scripts\scr_create_rope.gml</script>
+    <script>scripts\scr_die.gml</script>
     <scripts name="effects">
       <script>scripts\scr_freeze.gml</script>
       <script>scripts\scr_screenshake.gml</script>
     </scripts>
-    <script>scripts\scr_die.gml</script>
+    <script>scripts\draw_text_outline.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_restart_counter</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_player</object>
@@ -44,6 +51,7 @@
       <object>objects\obj_freeze</object>
       <object>objects\obj_screenshake</object>
       <object>objects\obj_smoke</object>
+      <object>objects\obj_tutorial</object>
     </objects>
     <objects name="walls">
       <object>objects\obj_unlockable_door</object>
@@ -69,6 +77,7 @@
     <room>rooms\level4</room>
     <room>rooms\level5</room>
     <room>rooms\level6</room>
+    <room>rooms\level6_2</room>
     <room>rooms\level7</room>
     <room>rooms\level8</room>
     <room>rooms\level9</room>
