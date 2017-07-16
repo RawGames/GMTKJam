@@ -205,6 +205,8 @@ if (alarm[0] &gt; 15 &amp;&amp; alarm[0] != 30){
     
     instance_create(x+dist*sin(angle), y+dist*cos(angle), obj_smoke);
     
+    audio_play_sound(snd_boost, 0 ,false);
+    
     scr_freeze(6);
 }
 </string>

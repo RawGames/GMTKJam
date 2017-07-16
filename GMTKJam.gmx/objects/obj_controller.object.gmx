@@ -37,6 +37,8 @@ restart_counter = 0;
 
 // display stuff
 display_set_gui_size(view_wview, view_hview);
+
+exit_timer = 60;
 </string>
           </argument>
         </arguments>
@@ -69,6 +71,11 @@ if (keyboard_check_pressed(ord('R'))){
     
 if (keyboard_check_pressed(vk_tab))
     counter_activated = !counter_activated;
+    
+if (keyboard_check(vk_escape)){
+    exit_timer = approach(exit_timer, 0, 1);
+    if (exit_timer == 0) game_end();
+} else exit_timer = 60;
 
 </string>
           </argument>
