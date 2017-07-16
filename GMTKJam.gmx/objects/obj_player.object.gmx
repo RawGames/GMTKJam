@@ -138,7 +138,7 @@ if (place_meeting(x, y + yspeed, obj_wall) &amp;&amp; !dead){
 y += yspeed*game_running;
 
 // kollar om man nuddar marken yspeed -4
-if (place_meeting(x, y+1, obj_wall) &amp;&amp; !dead){
+if ( place_meeting(x, y+1, obj_wall) &amp;&amp; !dead){
     var wall = instance_place(x,y+1,obj_wall);
     if (wall.sol){
         if (jump) yspeed = -4;
@@ -158,8 +158,10 @@ if (up){
 }
 
 // restarts room
-if (y &gt; room_height+32) room_restart();
-
+if (y &gt; room_height+32){
+    restart_counter ++;
+    room_restart();
+}
 </string>
           </argument>
         </arguments>

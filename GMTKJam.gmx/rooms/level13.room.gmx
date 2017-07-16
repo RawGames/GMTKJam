@@ -124,7 +124,7 @@
     <instance objName="obj_unlockable_door" x="360" y="256" name="inst_A8F44132" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlockable_door" x="360" y="224" name="inst_4915ADBB" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlockable_door" x="281" y="224" name="inst_3A8B3F10" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_invisible_wall" x="334" y="96" name="inst_E490A0C7" locked="0" code="" scaleX="0.119999997317791" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_invisible_wall" x="333" y="96" name="inst_E490A0C7" locked="0" code="" scaleX="0.0799999982118607" scaleY="0.899999976158142" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="352" y="128" name="inst_86212AEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="352" y="96" name="inst_0D40BED3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="256" y="64" name="inst_A38C0756" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

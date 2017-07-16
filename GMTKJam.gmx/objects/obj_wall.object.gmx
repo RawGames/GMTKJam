@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sol = true;
+            <string>scr_autotile();
+image_speed = 0;
+sol = true;
 </string>
           </argument>
         </arguments>

@@ -94,19 +94,23 @@
     <instance objName="obj_wall" x="224" y="256" name="inst_5E6256BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="224" y="224" name="inst_11A23AEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="224" y="192" name="inst_7B8CF320" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="224" y="96" name="inst_A26BF3F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="224" y="128" name="inst_D5734C75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="224" y="144" name="inst_D2367F15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_button" x="176" y="256" name="inst_7F78BA8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_invisible_wall" x="176" y="270" name="inst_4B048F0D" locked="0" code="" scaleX="1" scaleY="0.119999997317791" colour="4294967295" rotation="0"/>
+    <instance objName="obj_invisible_wall" x="176" y="269" name="inst_4B048F0D" locked="0" code="" scaleX="0.899999976158142" scaleY="0.0799999982118607" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlockable_door" x="416" y="256" name="inst_19C19448" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlockable_door" x="416" y="224" name="inst_97A3AA40" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlockable_door" x="416" y="192" name="inst_8E663D2A" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlockable_door" x="416" y="160" name="inst_D8DCB891" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlockable_door" x="416" y="128" name="inst_589A7F04" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlockable_door" x="416" y="96" name="inst_2A7B9584" locked="0" code="button = obj_button;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_invisible_wall" x="224" y="96" name="inst_B7C3AFE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_invisible_wall" x="224" y="152" name="inst_8120049F" locked="0" code="" scaleX="1" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_invisible_wall" x="224" y="128" name="inst_F37C9EA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
-  <tiles/>
+  <tiles>
+    <tile bgName="background1" x="208" y="128" w="32" h="32" xo="64" yo="32" id="10000007" name="inst_5AB99E2F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="208" y="105" w="32" h="32" xo="64" yo="96" id="10000008" name="inst_0E9F9EF6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="208" y="78" w="32" h="32" xo="64" yo="96" id="10000009" name="inst_78462833" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+  </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>

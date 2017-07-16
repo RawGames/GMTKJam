@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>button = noone;
+image_speed = 0;
+
+scr_autotile();
 
 alpha = 1;
 

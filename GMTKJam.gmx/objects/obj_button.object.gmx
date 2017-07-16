@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>activated = false;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -56,6 +57,8 @@ if(place_meeting(x, y,obj_player)){
     if (!activated) audio_play_sound(snd_btnpressed, 1, false);
     activated = true;
 }
+
+image_index = activated;
 </string>
           </argument>
         </arguments>

@@ -27,6 +27,7 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
+    <background>background\background1</background>
     <background>background\bac_tutorial</background>
   </backgrounds>
   <paths name="paths"/>
@@ -34,11 +35,12 @@
     <script>scripts\approach.gml</script>
     <script>scripts\scr_create_rope.gml</script>
     <script>scripts\scr_die.gml</script>
+    <script>scripts\draw_text_outline.gml</script>
+    <script>scripts\scr_autotile.gml</script>
     <scripts name="effects">
       <script>scripts\scr_freeze.gml</script>
       <script>scripts\scr_screenshake.gml</script>
     </scripts>
-    <script>scripts\draw_text_outline.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_restart_counter</font>
