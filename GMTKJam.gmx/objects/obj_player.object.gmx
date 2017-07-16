@@ -3,7 +3,7 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>spr_player</maskName>
@@ -193,7 +193,7 @@ if (alarm[0] &gt; 15 &amp;&amp; alarm[0] != 30){
     xspeed = -sin(angle)*7;
     yspeed = -cos(angle)*6;
     
-    dist = distance_to_object(box)/2
+    dist = (distance_to_object(box) / 4) * 3 
     
     instance_create(x+dist*sin(angle), y+dist*cos(angle), obj_smoke);
     
