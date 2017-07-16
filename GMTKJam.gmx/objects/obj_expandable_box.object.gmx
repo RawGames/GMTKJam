@@ -121,7 +121,7 @@ if (y &lt; obj_player.y){
     }
 }
 
-
+var prev_xspeed = xspeed;
 if (place_meeting(x + xspeed, y, obj_wall)){
     // avrundar x så att man inte fastnar i vägg
     if (xspeed &gt; 0) x = floor(x);
@@ -131,11 +131,13 @@ if (place_meeting(x + xspeed, y, obj_wall)){
         x += sign(xspeed);
     }
     xspeed = 0;
+    if (abs(prev_xspeed) &gt; 2) audio_play_sound(snd_wallhit, 0, false);
 }
 
 // lägger till hastighet på x
 x += xspeed *game_running;
 
+var prev_yspeed = yspeed;
 if (place_meeting(x, y + yspeed, obj_wall)){
     // avrundar y
     if (yspeed &gt; 0) y = floor(y);
@@ -145,6 +147,7 @@ if (place_meeting(x, y + yspeed, obj_wall)){
         y += sign(yspeed);
     }
     yspeed = 0;
+    if (prev_yspeed &gt; 2) audio_play_sound(snd_wallhit, 0, false);
 }
 // lägger till hastighet på y
 y += yspeed *game_running;
