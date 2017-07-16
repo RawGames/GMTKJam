@@ -102,10 +102,12 @@ if (left || right){
     image_speed = 0;
     image_index = 0;
 }
-    
-if (place_meeting(x + xspeed, y, obj_wall) &amp;&amp; !dead){
+
+var txspeed = xspeed
+if (abs(xspeed) &lt; 1 &amp;&amp; abs(xspeed) &gt; 0) txspeed = sign(xspeed);
+if (place_meeting(x + txspeed, y, obj_wall) &amp;&amp; !dead){
     // avrundar x så att man inte fastnar i vägg
-    var wall = instance_place(x + xspeed, y, obj_wall);
+    var wall = instance_place(x + txspeed, y, obj_wall);
     if (wall.sol == true){
         if (xspeed &gt; 0) x = floor(x);
         else if (xspeed &lt; 0) x = ceil(x);
@@ -142,6 +144,10 @@ if (place_meeting(x, y+1, obj_wall) &amp;&amp; !dead){
         if (jump) yspeed = -4;
     } else yspeed += GRAV
 } else yspeed += GRAV
+
+if (place_meeting(x, y, obj_spike)){
+    scr_die();
+}
 
 // gå genom dörr
 if (up){

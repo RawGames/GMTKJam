@@ -147,6 +147,9 @@ if (place_meeting(x, y + yspeed, obj_wall)){
 // lägger till hastighet på y
 y += yspeed *game_running;
 
+if (place_meeting(x, y, obj_spike))
+    instance_destroy();
+
 // kollar om den står på mark
 if (!place_meeting(x, y+1, obj_wall)){
     // gravitation

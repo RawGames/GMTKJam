@@ -16,6 +16,7 @@
     <sprite>sprites\spr_laser_turret</sprite>
     <sprite>sprites\spr_laser_reciever</sprite>
     <sprite>sprites\spr_tutorial</sprite>
+    <sprite>sprites\spr_spike</sprite>
     <sprites name="walls">
       <sprite>sprites\spr_expandable_box</sprite>
       <sprite>sprites\spr_unlockable_wall</sprite>
@@ -46,6 +47,7 @@
     <object>objects\obj_controller</object>
     <object>objects\obj_player</object>
     <object>objects\obj_door</object>
+    <object>objects\obj_spike</object>
     <object>objects\obj_button</object>
     <objects name="effects">
       <object>objects\obj_freeze</object>
@@ -84,6 +86,7 @@
     <room>rooms\level10</room>
     <room>rooms\level11</room>
     <room>rooms\level12</room>
+    <room>rooms\level13</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42931.5407356019</constant>
